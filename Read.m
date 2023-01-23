@@ -14,8 +14,8 @@ formatSpec = '%f %f %f %f %f %f %f %f %f %f %f %f';
 data = textscan(fid, formatSpec, 'CollectOutput', true);
 data = data{1};
 
-new_vector1 = rand(173,1);
-new_vector2 = rand(173,1);
+new_vector1 = gPPI_correct_pred;
+new_vector2 = gPPI_correct_pred;
 
 % replace the 3rd column of data with the new vector1
 data(:,3) = new_vector1;

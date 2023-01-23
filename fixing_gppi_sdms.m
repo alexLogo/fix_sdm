@@ -47,7 +47,7 @@ gPPI_correct_pred = times(voi_tc,parametric_pred);
 
 
 plot(gPPI_correct_pred)
-modify_sdm_file2(matched_pairs(matched_pair).file1, index_vec_to_replace, gPPI_correct_pred)
+modify_sdm_file4(matched_pairs(matched_pair).file1, 3, gPPI_correct_pred)
 
 %modify_sdm_file(matched_pairs(matched_pair).file1, index_vec_to_replace, gPPI_correct_pred)
 %a = createSDMStruct('FileVersion:',1,'NrOfPredictors:',12,'NrOfDataPoints:',173,'IncludesConstant:',1,'FirstConfoundPredictor:',1,'showArray',gPPI_correct_pred);
