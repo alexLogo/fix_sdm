@@ -1,0 +1,9 @@
+FileVersion:            1
+
+NrOfPredictors:         12
+NrOfDataPoints:         173
+IncludesConstant:       1
+FirstConfoundPredictor: 12
+
+192 192 192   128 128 128   0 255 0   0 255 0   0 255 0   192 192 192   128 128 128   0 255 0   0 255 0   0 255 0   128 128 128   128 128 128
+"PPI_<VM_instructions>_L_ins" "PPI_<VM_Responses>_L_ins" "PPI_<VM_01_SA>_L_ins" "PPI_<VM_02_SA>_L_ins" "PPI_<VM_03_SA>_L_ins" "<VM_instructions>" "<VM_Responses>" "<VM_01_SA>" "<VM_02_SA>" "<VM_03_SA>" "L_ins_predictor" "Constant"
