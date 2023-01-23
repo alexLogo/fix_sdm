@@ -30,10 +30,11 @@ function modify_sdm_file(filepath, vector_number, new_vector)
     [filepath_folder, filepath_name, filepath_ext] = fileparts(filepath);
     new_filepath = fullfile(filepath_folder, [filepath_name '_modified' filepath_ext]);
     newFileID = fopen(new_filepath,'w');
+    fprintf('File saved to %s\n', new_filepath);
     for i = 1:NrOfPredictors
-        fwrite(newFileID, data(i,:), 'double');
+        fwrite(newFileID, data({i}),'double');
         fprintf(newFileID, '\n');
     end
-    fclose(newFileID);
     fprintf('File saved to %s\n', new_filepath);
+    fclose(newFileID);    
 end
