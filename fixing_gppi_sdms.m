@@ -20,7 +20,7 @@ plot(voi_tc)
 
 runum = matched_pairs(matched_pair).run_num;
 
-if str2double(runum) == 1
+if str2double(runum) == 1;
 
 parametric_pred=import_para_run1(matched_pairs(matched_pair).file2);
 
@@ -41,12 +41,13 @@ end
 end
 
 plot(parametric_pred)
-%gPPI_correct_pred = multiply_elementwise(voi_tc,parametric_pred);
-gPPI_correct_pred = times(voi_tc,parametric_pred);
+gPPI_correct_pred = multiply_elementwise(voi_tc,parametric_pred);
+%gPPI_correct_pred = times(voi_tc,parametric_pred);
+%gPPI_correct_pred = num2hex(gPPI_correct_pred);
+gPPI_correct_pred(gPPI_correct_pred==0) = 0;
 
 
-
-plot(gPPI_correct_pred)
+%plot(gPPI_correct_pred)
 modify_sdm_file4('gPPI_SS02_run2_VM-02-S1R1_SCCTBL_3DMCTS_LTR_THPGLMF2c_256_trilin_3x1.0_MNI_SD3DVSS6.00mm_L_Ins.sdm', 3, gPPI_correct_pred)
 
 %modify_sdm_file(matched_pairs(matched_pair).file1, index_vec_to_replace, gPPI_correct_pred)

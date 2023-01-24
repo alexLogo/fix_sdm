@@ -15,7 +15,7 @@ function modify_sdm_file4(filepath, vector_number, new_vector)
     
     % replace the specified vector_number column of data with the new vector
     %sdmdata(:,vector_number) = new_vector;
-    sdmdata(:, vector_number) = rand(173,1);
+    sdmdata(:, vector_number) = new_vector;
     % close the file
     fclose(fid);
 
